@@ -225,7 +225,7 @@
                         "children": []
                       },
                       {
-                        "content": "A player can press a key to airdrop units onto that space.",
+                        "content": "A player can press a key to airdrop units onto that space.\n\nThis is the primary method of interaction.",
                         "children": []
                       }
                     ]
