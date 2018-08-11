@@ -1,4 +1,4 @@
-extends Node2D
+extends "res://scripts/BaseController.gd"
 
 func _ready():
 	pass
