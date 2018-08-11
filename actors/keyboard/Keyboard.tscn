@@ -8,8 +8,26 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Key" parent="." index="0" instance=ExtResource( 1 )]
+[node name="Q" parent="." index="0" instance=ExtResource( 1 )]
 
-key_name = "Q"
+[node name="W" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 47.3099, 0.400925 )
+
+[node name="E" parent="." index="2" instance=ExtResource( 1 )]
+
+position = Vector2( 107.45, 0.801849 )
+
+[node name="R" parent="." index="3" instance=ExtResource( 1 )]
+
+position = Vector2( 156.363, 1.20279 )
+
+[node name="T" parent="." index="4" instance=ExtResource( 1 )]
+
+position = Vector2( 214.899, 60.1397 )
+
+[node name="Y" parent="." index="5" instance=ExtResource( 1 )]
+
+position = Vector2( 274.104, 1.41145 )
 
 

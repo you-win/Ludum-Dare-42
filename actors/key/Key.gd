@@ -9,15 +9,15 @@ enum { LEFT, NEUTRAL, RIGHT }
 # Consts
 
 # Vars
-export var key_name = "Key" # Will be changed after being set in a scene
 export var power = 100 # Strength of the current key
 
+var key_name
 var side # Set by Player actor
 var label
 
 func _ready():
+	key_name = self.name
 	label = $Label
-	
 	side = NEUTRAL
 	# Create the key name
 	_create_key_name()
