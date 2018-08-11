@@ -1,0 +1,309 @@
+[
+  {
+    "content": "Ludum Dare 42: Running out of space",
+    "children": [
+      {
+        "content": "Theme ideas",
+        "children": [
+          {
+            "content": "Expansion on those ideas",
+            "children": [
+              {
+                "content": "Plot and Gameplay",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "content": "Population growth",
+        "children": [
+          {
+            "content": "You are a serial killer. Whenever you kill someone, you store their body in some specific place.\n\nSoon, you start running out of space and must find other places to hide the bodies.",
+            "children": [
+              {
+                "content": "Plot",
+                "children": [
+                  {
+                    "content": "Every night, the player goes out and murders someone. Little to no backstory is given, but there are environmental clues as to who that victim is/was.\n\nThe player then drags the body back to some spot and hides it. In this case, they hide the body in a public space, like a park. The location changes after some amount of time.\n\nDuring the day, the player watches the scene to see if anyone notices the bodies.",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "content": "Gameplay",
+                "children": [
+                  {
+                    "content": "Simple stealth, assassination gameplay",
+                    "children": [
+                      {
+                        "content": "Assassination targets have a simple cone-of-vision mechanic.\n\nThey only see in a narrow cone in front of them. They are not affected by sound, so it is very simple to sneak up from behind. Even when the player is above them, they generally should not be able to see the player.",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "content": "Hide the body",
+                    "children": [
+                      {
+                        "content": "The player has to hide bodies within a certain amount of time. \n\nBodies can be placed anywhere where there is not already a body.",
+                        "children": []
+                      },
+                      {
+                        "content": "Bodies work better when placed on top of obvious hiding spots.",
+                        "children": [
+                          {
+                            "content": "Hiding spots:\n\nBushes, dumpsters, fountains",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "content": "Bodies will just be placed in front of things that are not hiding spots.",
+                        "children": []
+                      },
+                      {
+                        "content": "Bodies can be placed behind sub-optimal hiding spots, although it will be obvious that the body is not hidden.",
+                        "children": [
+                          {
+                            "content": "Sub-obtimal hiding spots:\n\nBenches, statues, mail dropboxes",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "content": "Non-hiding spots:\n\nNothing, buildings, fire hydrants",
+                        "children": [
+                          {
+                            "content": "Non-hiding spots:\n\nBuildings, nothing",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "content": "Watch the crowd",
+                    "children": [
+                      {
+                        "content": "The crowd will move around randomly. After a certain amount of time, the crowd will disperse and the day will turn to night.",
+                        "children": [
+                          {
+                            "content": "The crowd works on a hitbox system, semi-vision cone system.",
+                            "children": [
+                              {
+                                "content": "The hitbox determines whether or not the crowd gets suspicious/discovers a spot.",
+                                "children": []
+                              },
+                              {
+                                "content": "The semi-vision cone determines whether or not they see a non-hiding spot.",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "content": "The crowd will only discover a body if they are directly over a hiding spot.",
+                            "children": [
+                              {
+                                "content": "Hiding spots are completely hidden.",
+                                "children": []
+                              },
+                              {
+                                "content": "Sub-optimal hiding spots direct attention and the crowd will attempt to attract others to investigate together.",
+                                "children": []
+                              },
+                              {
+                                "content": "Not hiding spots will be discovered immediately.",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "content": "You are part of the illuminati. In order to control rampant population growth, you must select certain parts of the population to cull, enact legislation to limit births in certain regions, and maintain world order.",
+            "children": [
+              {
+                "content": "Plot",
+                "children": [
+                  {
+                    "content": "The only reason why the world does not get hopelessly overpopulated is because of the efforts of the Illuminati.\n\nLately, they've been recruiting new blood in order to help stabilize and reduce the population on the Earth.\n\nHelp save the Earth by reviewing situations and deciding the best course of action for each. Will the Illuminati appreciate your actions, or will you hold on to your human emotions?",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "content": "Gameplay",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "content": "Literally running out of outer space",
+        "children": [
+          {
+            "content": "You are an astronaut. Your spacecraft has run into trouble and you must find your way back home.\n\nBe careful, as you are on a time limit and falling back to Earth in your space suit means certain death.",
+            "children": []
+          },
+          {
+            "content": "You are some alien/human who is trying to make it out of this part of the universe. Guide your ship to the end while avoiding obstacles.",
+            "children": []
+          }
+        ]
+      },
+      {
+        "content": "Gathering loot",
+        "children": [
+          {
+            "content": "You are an adventurer. You accumulate items throughout your adventures but need to create more space to store all of your treasures. ",
+            "children": []
+          },
+          {
+            "content": "You are a shopkeeper. Adventurers keep coming into your shop to sell you things and, for some reason, you keep buying all of their shit.\n\nActually, the reason why you keep buying all of their shit is because you are cursed by some deity. That deity accompanies you and you must come up with good reasons to get rid of the stuff you bought.",
+            "children": []
+          },
+          {
+            "content": "You are a garbage collecter in a fantasy world. Therefore, it is your job to dump everyone elses' garbage in a landfill.\n\nYou must find gather up and dispose of as much garbage as possible each day.",
+            "children": []
+          }
+        ]
+      },
+      {
+        "content": "Battle game on the keyboard",
+        "children": [
+          {
+            "content": "The player faces off against a computer opponent (or even another player) and they control keys on a keyboard, vying for control of the space bar. \n\nA virtual keyboard displays current player holdings on the keyboard.\n\nPlayers initially control one key on the keyboard, Q and [ respectively, and can move to take control of adjascent keys. \n\nThe game ends when one player maintains control of the spacebar for some amount of time.",
+            "children": [
+              {
+                "content": "Plot",
+                "children": [
+                  {
+                    "content": "The countries of Capital Q and Open Square Bracket are the two superpowers of the keyboard.\n\nA new development in weapons technology has lead the two to come into conflict with each other, as each want to control the lands of Spacebar. The new weapon technology allows the two nations to take over adjascent keys, something that previously had been impossible for any Key to do.",
+                    "children": [
+                      {
+                        "content": "This story is actual garbage but gives some background to the game.",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "content": "Gameplay",
+                "children": [
+                  {
+                    "content": "Accrue units",
+                    "children": [
+                      {
+                        "content": "Simply having control over a key causes that key to passively generate war units. ",
+                        "children": []
+                      },
+                      {
+                        "content": "Spaces stop accruing units when the number of units goes below 1.",
+                        "children": []
+                      },
+                      {
+                        "content": "Players accrue airdrop units that can be deployed at any key that is adjascent to a controlled key.",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "content": "Move units to attack adjascent spaces",
+                    "children": [
+                      {
+                        "content": "Controlling a space causes the space to passively attack adjascent spaces.",
+                        "children": []
+                      },
+                      {
+                        "content": "A player can press a key to airdrop units onto that space.",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "content": "Neutral spaces",
+                    "children": [
+                      {
+                        "content": "Neutral keys start with a base amount of war units that are used to defend themselves.\n\nOnce a key is taken over by either player, that space will never become naturally become neutral.",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "content": "Number key upgrades",
+                    "children": [
+                      {
+                        "content": "Number keys, once controlled, give a player bonuses.",
+                        "children": []
+                      },
+                      {
+                        "content": "Number keys, once pressed and also under a player's control, can be pressed to activate their bonus.",
+                        "children": []
+                      },
+                      {
+                        "content": "1 and -",
+                        "children": [
+                          {
+                            "content": "Airdrop boost?",
+                            "children": []
+                          },
+                          {
+                            "content": "Increase unit production for a particular key?",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "content": "2 and 0",
+                        "children": []
+                      },
+                      {
+                        "content": "3 and 9",
+                        "children": []
+                      },
+                      {
+                        "content": "4 and 8",
+                        "children": []
+                      },
+                      {
+                        "content": "5 and 7",
+                        "children": []
+                      },
+                      {
+                        "content": "6",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "content": "Holding the Spacebar",
+                    "children": [
+                      {
+                        "content": "Once the Spacebar is taken over, a player can press it to end the game.",
+                        "children": []
+                      },
+                      {
+                        "content": "The Spacebar can only be pressed after 60 seconds of controlling the key.",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
