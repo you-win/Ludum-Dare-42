@@ -20,4 +20,4 @@ Global="*res://scripts/Global.gd"
 
 [rendering]
 
-environment/default_environment="res://Assets/default_env.tres"
+environment/default_environment="res://assets/default_env.tres"

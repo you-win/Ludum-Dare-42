@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Keyboard.png-2e69f238d5f31da9f2227c232fe1cb86.stex"
+path="res://.import/Keyboard.png-85aec75813e4e7f735dd7b5df08823c9.stex"
 
 [deps]
 
-source_file="res://Assets/keyboard/Keyboard.png"
-dest_files=[ "res://.import/Keyboard.png-2e69f238d5f31da9f2227c232fe1cb86.stex" ]
+source_file="res://assets/keyboard/Keyboard.png"
+dest_files=[ "res://.import/Keyboard.png-85aec75813e4e7f735dd7b5df08823c9.stex" ]
 
 [params]
 
