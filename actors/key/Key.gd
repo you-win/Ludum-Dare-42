@@ -9,6 +9,10 @@ enum { LEFT, NEUTRAL, RIGHT }
 # Consts
 
 # Vars
+export(NodePath) var node0 # Adjacent keys that can be attacked.
+export(NodePath) var node1 # Will need to be checked if they are null before use,
+export(NodePath) var node2 # as some keys will only have two adjacent keys.
+export(NodePath) var node3
 export var power = 100 # Strength of the current key
 
 var key_name

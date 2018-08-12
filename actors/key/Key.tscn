@@ -9,6 +9,10 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+node0 = null
+node1 = null
+node2 = null
+node3 = null
 power = 100
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
