@@ -7,29 +7,211 @@
 
 script = ExtResource( 1 )
 __meta__ = {
+"_edit_group_": true,
 "_edit_lock_": true
 }
 
-[node name="Q" parent="." index="0" instance=ExtResource( 2 )]
+[node name="1" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="W" parent="." index="1" instance=ExtResource( 2 )]
+position = Vector2( -165, -30 )
+node0 = NodePath("../2")
+node1 = NodePath("../Q")
 
-position = Vector2( 47.3099, 0.400925 )
+[node name="2" parent="." index="1" instance=ExtResource( 2 )]
 
-[node name="E" parent="." index="2" instance=ExtResource( 2 )]
+position = Vector2( -135, -30 )
+node0 = NodePath("../1")
+node1 = NodePath("../W")
+node2 = NodePath("../3")
 
-position = Vector2( 107.45, 0.801849 )
+[node name="3" parent="." index="2" instance=ExtResource( 2 )]
 
-[node name="R" parent="." index="3" instance=ExtResource( 2 )]
+position = Vector2( -105, -30 )
+node0 = NodePath("../2")
+node1 = NodePath("../E")
+node2 = NodePath("../4")
 
-position = Vector2( 156.363, 1.20279 )
+[node name="4" parent="." index="3" instance=ExtResource( 2 )]
 
-[node name="T" parent="." index="4" instance=ExtResource( 2 )]
+position = Vector2( -75, -30 )
+node0 = NodePath("../3")
+node1 = NodePath("../R")
+node2 = NodePath("../5")
 
-position = Vector2( 211.633, 2.69217 )
+[node name="5" parent="." index="4" instance=ExtResource( 2 )]
 
-[node name="Y" parent="." index="5" instance=ExtResource( 2 )]
+position = Vector2( -45, -30 )
+node0 = NodePath("../4")
+node1 = NodePath("../T")
+node2 = NodePath("../6")
 
-position = Vector2( 274.104, 1.41145 )
+[node name="6" parent="." index="5" instance=ExtResource( 2 )]
+
+position = Vector2( -15, -30 )
+node0 = NodePath("../5")
+node1 = NodePath("../Y")
+node2 = NodePath("../7")
+
+[node name="7" parent="." index="6" instance=ExtResource( 2 )]
+
+position = Vector2( 15, -30 )
+node0 = NodePath("../6")
+node1 = NodePath("../Y")
+node2 = NodePath("../8")
+
+[node name="8" parent="." index="7" instance=ExtResource( 2 )]
+
+position = Vector2( 45, -30 )
+node0 = NodePath("../7")
+node1 = NodePath("../U")
+node2 = NodePath("../9")
+
+[node name="9" parent="." index="8" instance=ExtResource( 2 )]
+
+position = Vector2( 75, -30 )
+node0 = NodePath("../8")
+node1 = NodePath("../I")
+node2 = NodePath("../0")
+
+[node name="0" parent="." index="9" instance=ExtResource( 2 )]
+
+position = Vector2( 105, -30 )
+node0 = NodePath("../9")
+node1 = NodePath("../O")
+node2 = NodePath("../-")
+
+[node name="-" parent="." index="10" instance=ExtResource( 2 )]
+
+position = Vector2( 135, -30 )
+node0 = NodePath("../0")
+node1 = NodePath("../P")
+node2 = NodePath("../=")
+
+[node name="=" parent="." index="11" instance=ExtResource( 2 )]
+
+position = Vector2( 165, -30 )
+node0 = NodePath("../-")
+node1 = NodePath("../[")
+
+[node name="Q" parent="." index="12" instance=ExtResource( 2 )]
+
+position = Vector2( -150, 0 )
+node0 = NodePath("../1")
+node1 = NodePath("../W")
+node2 = NodePath("../A")
+
+[node name="W" parent="." index="13" instance=ExtResource( 2 )]
+
+position = Vector2( -120, 0 )
+
+[node name="E" parent="." index="14" instance=ExtResource( 2 )]
+
+position = Vector2( -90, 0 )
+
+[node name="R" parent="." index="15" instance=ExtResource( 2 )]
+
+position = Vector2( -60, 0 )
+
+[node name="T" parent="." index="16" instance=ExtResource( 2 )]
+
+position = Vector2( -30, 0 )
+
+[node name="Y" parent="." index="17" instance=ExtResource( 2 )]
+
+[node name="U" parent="." index="18" instance=ExtResource( 2 )]
+
+position = Vector2( 30, 0 )
+
+[node name="I" parent="." index="19" instance=ExtResource( 2 )]
+
+position = Vector2( 60, 0 )
+
+[node name="O" parent="." index="20" instance=ExtResource( 2 )]
+
+position = Vector2( 90, 0 )
+
+[node name="P" parent="." index="21" instance=ExtResource( 2 )]
+
+position = Vector2( 120, 0 )
+
+[node name="[" parent="." index="22" instance=ExtResource( 2 )]
+
+position = Vector2( 150, 0 )
+
+[node name="A" parent="." index="23" instance=ExtResource( 2 )]
+
+position = Vector2( -135, 30 )
+
+[node name="S" parent="." index="24" instance=ExtResource( 2 )]
+
+position = Vector2( -105, 30 )
+
+[node name="D" parent="." index="25" instance=ExtResource( 2 )]
+
+position = Vector2( -75, 30 )
+
+[node name="F" parent="." index="26" instance=ExtResource( 2 )]
+
+position = Vector2( -45, 30 )
+
+[node name="G" parent="." index="27" instance=ExtResource( 2 )]
+
+position = Vector2( -15, 30 )
+
+[node name="H" parent="." index="28" instance=ExtResource( 2 )]
+
+position = Vector2( 15, 30 )
+
+[node name="J" parent="." index="29" instance=ExtResource( 2 )]
+
+position = Vector2( 45, 30 )
+
+[node name="K" parent="." index="30" instance=ExtResource( 2 )]
+
+position = Vector2( 75, 30 )
+
+[node name="L" parent="." index="31" instance=ExtResource( 2 )]
+
+position = Vector2( 105, 30 )
+
+[node name=";" parent="." index="32" instance=ExtResource( 2 )]
+
+position = Vector2( 135, 30 )
+
+[node name="Z" parent="." index="33" instance=ExtResource( 2 )]
+
+position = Vector2( -120, 60 )
+
+[node name="X" parent="." index="34" instance=ExtResource( 2 )]
+
+position = Vector2( -90, 60 )
+
+[node name="C" parent="." index="35" instance=ExtResource( 2 )]
+
+position = Vector2( -60, 60 )
+
+[node name="V" parent="." index="36" instance=ExtResource( 2 )]
+
+position = Vector2( -30, 60 )
+
+[node name="B" parent="." index="37" instance=ExtResource( 2 )]
+
+position = Vector2( 0, 60 )
+
+[node name="N" parent="." index="38" instance=ExtResource( 2 )]
+
+position = Vector2( 30, 60 )
+
+[node name="M" parent="." index="39" instance=ExtResource( 2 )]
+
+position = Vector2( 60, 60 )
+
+[node name="<" parent="." index="40" instance=ExtResource( 2 )]
+
+position = Vector2( 90, 60 )
+
+[node name=">" parent="." index="41" instance=ExtResource( 2 )]
+
+position = Vector2( 120, 60 )
 
 
