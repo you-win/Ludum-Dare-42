@@ -4,7 +4,6 @@ extends Node2D
 signal defeated
 
 # Enums
-enum { LEFT, NEUTRAL, RIGHT }
 
 # Consts
 
@@ -21,19 +20,19 @@ var actual_node1
 var actual_node2
 var actual_node3
 var actual_node4
+var actual_node5
 
-export var power = 100 # Strength of the current key
+var actual_node_list
+
+export(int) var power = 20 # Strength of the current key
+export(int) var health = 100
 
 var label
 var animation_player
 var timer
 var attack_delay
 
-var nodes_attached
-var actual_nodes_attached
-var actual_nodes_attached_no_nulls
-
-var key_name
+var key_name # What's actually displayed on the key
 var side
 var player_last_attacked_by
 
@@ -70,9 +69,10 @@ func _ready():
 			_:
 				pass
 	
-	side = NEUTRAL
+	side = Global.NEUTRAL
 	can_press_again = true
 	can_attack = true
+	actual_node_list = []
 	
 	# Set default animation
 	animation_player.play("n_unpressed")
@@ -80,10 +80,7 @@ func _ready():
 	# Create the key name
 	_create_key_name()
 	
-	_set_attached_nodes()
-
-func change_side(new_side):
-	side = new_side
+	_set_actual_nodes()
 
 func _create_key_name():
 	label.text = key_name
@@ -148,15 +145,48 @@ func _create_key_name():
 			pass
 	"""
 
+func _set_actual_nodes():
+	if node0 != null:
+		actual_node0 = get_node(node0)
+		actual_node_list.append(actual_node0)
+	if node1 != null:
+		actual_node1 = get_node(node1)
+		actual_node_list.append(actual_node1)
+	if node2 != null:
+		actual_node2 = get_node(node2)
+		actual_node_list.append(actual_node2)
+	if node3 != null:
+		actual_node3 = get_node(node3)
+		actual_node_list.append(actual_node3)
+	if node4 != null:
+		actual_node4 = get_node(node4)
+		actual_node_list.append(actual_node4)
+	if node5 != null:
+		actual_node5 = get_node(node5)
+		actual_node_list.append(actual_node5)
+
 func _process(delta):
+	# Can change this into a signal in the Singleplayer class
+	if Global.player_1_data.has(key_name):
+		side = Global.LEFT
+	elif Global.player_2_data.has(key_name):
+		side = Global.RIGHT
+	else:
+		side = Global.NEUTRAL
+	
 	# Check to see if the key has been defeated
-	if power < 1:
+	if health < 1:
 		emit_signal("defeated", key_name, player_last_attacked_by)
 		print(key_name + " is dead!")
-	print(power)
-	_attack()
+	if(self.side != Global.NEUTRAL and can_attack):
+		_attack()
+		can_attack = false
+		attack_delay.start()
 
 func pressed(key):
+	# Using self.name instead of key_name because of 
+	# how keycodes are named in Godot
+	# Ex: ; is returned as Semicolon
 	if(key == self.name and can_press_again):
 		_play_pressed_animation()
 		can_press_again = false
@@ -164,55 +194,31 @@ func pressed(key):
 
 func _play_pressed_animation():
 	match side:
-		NEUTRAL:
+		Global.NEUTRAL:
 			animation_player.play("n_pressed")
-		LEFT:
+		Global.LEFT:
 			animation_player.play("l_pressed")
-		RIGHT:
+		Global.RIGHT:
 			animation_player.play("r_pressed")
 		_:
 			print("There's a problem with the side variable!")
 
 func _attack():
-	for actual_node in actual_nodes_attached_no_nulls:
-		if can_attack:
-			actual_node.power -= 10
-			can_attack = false
-			attack_delay.start()
-
-func _set_attached_nodes():
-	nodes_attached = [
-		node0, 
-		node1, 
-		node2, 
-		node3, 
-		node4, 
-		node5
-	]
-	actual_nodes_attached = [
-		actual_node0,
-		actual_node1,
-		actual_node2,
-		actual_node3,
-		actual_node4
-	]
-	actual_nodes_attached_no_nulls = []
-	for i in range(0, len(nodes_attached) - 1):
-		if nodes_attached[i] != null:
-			actual_nodes_attached[i] = get_node(nodes_attached[i].get_as_property_path())
-	
-	for actual_node in actual_nodes_attached:
-		if actual_node != null:
-			actual_nodes_attached_no_nulls.append(actual_node)
+	if(key_name == "Q" and actual_node0 != null):
+		print(key_name + " attempting to attack " + actual_node0.name)
+	for actual_node in actual_node_list:
+		if(actual_node != null and actual_node.side != self.side):
+			actual_node.health -= power
+			actual_node.player_last_attacked_by = self.side
 
 func _on_Timer_timeout():
 	can_press_again = true
 	match side:
-		NEUTRAL:
+		Global.NEUTRAL:
 			animation_player.play("n_unpressed")
-		LEFT:
+		Global.LEFT:
 			animation_player.play("l_unpressed")
-		RIGHT:
+		Global.RIGHT:
 			animation_player.play("r_unpressed")
 		_:
 			print("There's a problem with the side variable!")

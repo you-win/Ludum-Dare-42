@@ -2,6 +2,7 @@ extends Node2D
 
 # Enums
 enum { MENU, SINGLEPLAYER, MULTIPLAYER, PAUSE }
+enum { LEFT, RIGHT, NEUTRAL }
 
 # Vars
 var _state

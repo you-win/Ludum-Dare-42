@@ -126,7 +126,8 @@ node2 = null
 node3 = null
 node4 = null
 node5 = null
-power = 100
+power = 20
+health = 100
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 

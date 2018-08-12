@@ -2,6 +2,7 @@ extends Node2D
 
 # Signals
 signal send_key_pressed
+signal key_side_changed
 
 # Vars
 var keys_controlled_list
@@ -16,8 +17,22 @@ func _input(event):
 
 func _initialize_scores():
 	Global.player_1_data = ["Q"]
-	Global.player_1_data = ["["]
+	Global.player_2_data = ["["]
 
-func update_score(side):
+func update_score(key, new_owner):
+	if new_owner == Global.RIGHT:
+		Global.player_1_data.append(key)
+		if Global.player_2_data.has(key):
+			Global.player_2_data.remove(key)
+	elif new_owner == Global.LEFT:
+		Global.player_2_data.append(key)
+		if Global.player_1_data.has(key):
+			Global.player_1_data.remove(key)
+	elif new_owner == Global.NEUTRAL:
+		if Global.player_1_data.has(key):
+			Global.player_1_data.remove(key)
+		if Global.player_2_data.has(key):
+			Global.player_2_data.remove(key)
+	else:
+		print("There's been a problem in the update_score function")
 	
-	pass
