@@ -117,12 +117,9 @@ tracks/0/keys = {
 "values": [ Rect2( 64, 0, 32, 32 ) ]
 }
 
-[node name="Key" type="Node2D" index="0"]
+[node name="Key" type="Node2D"]
 
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 node0 = null
 node1 = null
 node2 = null
@@ -144,9 +141,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -9.0
+margin_left = -7.0
 margin_top = -9.0
-margin_right = 72.0
+margin_right = 74.0
 margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -178,7 +175,7 @@ blend_times = [  ]
 [node name="Timer" type="Timer" parent="." index="3"]
 
 process_mode = 1
-wait_time = 1.0
+wait_time = 0.5
 one_shot = false
 autostart = false
 

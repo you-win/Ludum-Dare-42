@@ -4,7 +4,7 @@
 [ext_resource path="res://actors/key/Key.tscn" type="PackedScene" id=2]
 [ext_resource path="res://actors/spacebar/Spacebar.tscn" type="PackedScene" id=3]
 
-[node name="Keyboard" type="Node2D"]
+[node name="Keyboard" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -81,14 +81,14 @@ node0 = NodePath("../9")
 node1 = NodePath("../O")
 node2 = NodePath("../-")
 
-[node name="-" parent="." index="10" instance=ExtResource( 2 )]
+[node name="Minus" parent="." index="10" instance=ExtResource( 2 )]
 
 position = Vector2( 135, -30 )
 node0 = NodePath("../0")
 node1 = NodePath("../P")
 node2 = NodePath("../=")
 
-[node name="=" parent="." index="11" instance=ExtResource( 2 )]
+[node name="Equal" parent="." index="11" instance=ExtResource( 2 )]
 
 position = Vector2( 165, -30 )
 node0 = NodePath("../-")
@@ -174,7 +174,7 @@ node1 = NodePath("../-")
 node2 = NodePath("../[")
 node3 = NodePath("../L")
 
-[node name="[" parent="." index="22" instance=ExtResource( 2 )]
+[node name="BraceLeft" parent="." index="22" instance=ExtResource( 2 )]
 
 position = Vector2( 150, 0 )
 node0 = NodePath("../P")
@@ -254,7 +254,7 @@ node1 = NodePath("../P")
 node2 = NodePath("../;")
 node3 = NodePath("../<")
 
-[node name=";" parent="." index="32" instance=ExtResource( 2 )]
+[node name="Semicolon" parent="." index="32" instance=ExtResource( 2 )]
 
 position = Vector2( 135, 30 )
 node0 = NodePath("../L")
@@ -315,20 +315,20 @@ node1 = NodePath("../K")
 node2 = NodePath("../<")
 node3 = NodePath("../Spacebar")
 
-[node name="<" parent="." index="40" instance=ExtResource( 2 )]
+[node name="Comma" parent="." index="40" instance=ExtResource( 2 )]
 
 position = Vector2( 90, 60 )
 node0 = NodePath("../M")
 node1 = NodePath("../L")
 node2 = NodePath("../>")
 
-[node name=">" parent="." index="41" instance=ExtResource( 2 )]
+[node name="Period" parent="." index="41" instance=ExtResource( 2 )]
 
 position = Vector2( 120, 60 )
 node0 = NodePath("../<")
 node1 = NodePath("../;")
 
-[node name="Spacebar" parent="." index="42" instance=ExtResource( 3 )]
+[node name="Space" parent="." index="42" instance=ExtResource( 3 )]
 
 position = Vector2( 0, 90 )
 

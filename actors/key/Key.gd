@@ -21,17 +21,49 @@ var label
 var animation_player
 var timer
 
+var nodes_attached
+
 var key_name
 var side
 var player_last_attacked_by
+
+var can_press_again
 
 func _ready():
 	label = $Label
 	animation_player = $AnimationPlayer
 	timer = $Timer
 	
+	timer.connect("timeout", self, "_on_Timer_timeout")
+	
 	key_name = self.name
+	
+	# Account for Comma, Period, Semicolon, BraceLeft, Equal, and Minus
+	# being completely spelled out
+	if Global.key_names_to_replace.has(key_name):
+		match key_name:
+			"Comma":
+				key_name = ","
+			"Period":
+				key_name = "."
+			"Semicolon":
+				key_name = ";"
+			"BraceLeft":
+				key_name = "["
+			"Equal":
+				key_name = "="
+			"Minus":
+				key_name = "-"
+			_:
+				pass
+	
 	side = NEUTRAL
+	can_press_again = true
+	
+	nodes_attached = [node0, node1, node2, node3, node4, node5]
+	
+	# Set default animation
+	animation_player.play("n_unpressed")
 	
 	# Create the key name
 	_create_key_name()
@@ -110,10 +142,36 @@ func _process(delta):
 	_attack()
 
 func pressed(key):
-	if key == key_name:
-		print(key_name + " pressed!")
-		
+	if(key == self.name and can_press_again):
+		_play_pressed_animation()
+		can_press_again = false
+		timer.start()
+
+func _play_pressed_animation():
+	match side:
+		NEUTRAL:
+			animation_player.play("n_pressed")
+		LEFT:
+			animation_player.play("l_pressed")
+		RIGHT:
+			animation_player.play("r_pressed")
+		_:
+			print("There's a problem with the side variable!")
+	
+	pass
 
 func _attack():
 	
 	pass
+
+func _on_Timer_timeout():
+	can_press_again = true
+	match side:
+		NEUTRAL:
+			animation_player.play("n_unpressed")
+		LEFT:
+			animation_player.play("l_unpressed")
+		RIGHT:
+			animation_player.play("r_unpressed")
+		_:
+			print("There's a problem with the side variable!")

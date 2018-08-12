@@ -1,8 +1,6 @@
 extends Node2D
 
 # Enums
-
-# States
 enum { MENU, SINGLEPLAYER, MULTIPLAYER, PAUSE }
 
 # Vars
@@ -12,6 +10,15 @@ var _tree
 # Global vars
 var player_1_data
 var player_2_data
+
+var key_names_to_replace = [
+	"Comma",
+	"Period",
+	"BraceLeft",
+	"Semicolon",
+	"Equal",
+	"Minus"
+]
 
 # Dicts
 var attack_groups
