@@ -21,6 +21,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Rect2( 32, 32, 32, 32 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -8, -8 ) ]
+}
 
 [sub_resource type="Animation" id=2]
 
@@ -39,6 +51,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Rect2( 32, 0, 32, 32 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -7, -9 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -59,6 +83,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Rect2( 0, 32, 32, 32 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -8, -8 ) ]
+}
 
 [sub_resource type="Animation" id=4]
 
@@ -77,6 +113,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Rect2( 0, 0, 32, 32 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -7, -9 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -97,6 +145,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Rect2( 64, 32, 32, 32 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -8, -8 ) ]
+}
 
 [sub_resource type="Animation" id=6]
 
@@ -116,6 +176,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Rect2( 64, 0, 32, 32 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -7, -9 ) ]
+}
 
 [node name="Key" type="Node2D"]
 
@@ -126,14 +198,14 @@ node2 = null
 node3 = null
 node4 = null
 node5 = null
-power = 35
+power = 40
 health = 100
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 32, 0, 32, 32 )
+region_rect = Rect2( 32, 32, 32, 32 )
 _sections_unfolded = [ "Region" ]
 
 [node name="Label" type="Label" parent="." index="1"]
@@ -142,10 +214,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -7.0
-margin_top = -9.0
-margin_right = 74.0
-margin_bottom = 32.0
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 73.0
+margin_bottom = 33.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -156,7 +228,7 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors" ]
+_sections_unfolded = [ "Rect", "custom_colors" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 
@@ -176,14 +248,14 @@ blend_times = [  ]
 [node name="Timer" type="Timer" parent="." index="3"]
 
 process_mode = 1
-wait_time = 0.5
+wait_time = 0.25
 one_shot = false
 autostart = false
 
 [node name="AttackDelay" type="Timer" parent="." index="4"]
 
 process_mode = 1
-wait_time = 0.75
+wait_time = 0.3
 one_shot = false
 autostart = false
 

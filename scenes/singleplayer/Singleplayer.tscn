@@ -1,16 +1,72 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/singleplayer/Singleplayer.gd" type="Script" id=1]
-[ext_resource path="res://actors/keyboard/Keyboard.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/background/Background.png" type="Texture" id=2]
+[ext_resource path="res://assets/keyboard/Keyboard.png" type="Texture" id=3]
+[ext_resource path="res://actors/keyboard/Keyboard.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/sound_effects/Hit0.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/sound_effects/Hit1.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/sound_effects/Hit2.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/music/ludum-dare-42-loop-no-harmonic.ogg" type="AudioStream" id=8]
 
-[node name="Singleplayer" type="Node2D"]
+[node name="Singleplayer" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
-[node name="Keyboard" parent="." index="0" instance=ExtResource( 2 )]
+[node name="Background" type="Sprite" parent="." index="0"]
+
+position = Vector2( 492.709, 284.123 )
+scale = Vector2( 4.96489, 3.77553 )
+texture = ExtResource( 2 )
+
+[node name="KeyboardImage" type="Sprite" parent="." index="1"]
+
+position = Vector2( 494.694, 303.773 )
+rotation = -0.010472
+scale = Vector2( 3.5, 3 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Keyboard" parent="." index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 500.613, 268.119 )
 scale = Vector2( 2, 2 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="Hit0" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Hit1" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Hit2" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 7 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Music" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 8 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 

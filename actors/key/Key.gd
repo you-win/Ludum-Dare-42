@@ -24,7 +24,7 @@ var actual_node5
 
 var actual_node_list
 
-export(int) var power = 35 # Strength of the current key
+export(int) var power = 40 # Strength of the current key
 export(int) var health = 100
 
 var label
