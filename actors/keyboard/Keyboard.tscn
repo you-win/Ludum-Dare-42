@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://actors/keyboard/Keyboard.gd" type="Script" id=1]
 [ext_resource path="res://actors/key/Key.tscn" type="PackedScene" id=2]
+[ext_resource path="res://actors/spacebar/Spacebar.tscn" type="PackedScene" id=3]
 
-[node name="Keyboard" type="Node2D" index="0"]
+[node name="Keyboard" type="Node2D"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -16,8 +17,6 @@ __meta__ = {
 position = Vector2( -165, -30 )
 node0 = NodePath("../2")
 node1 = NodePath("../Q")
-node4 = null
-node5 = null
 
 [node name="2" parent="." index="1" instance=ExtResource( 2 )]
 
@@ -25,8 +24,6 @@ position = Vector2( -135, -30 )
 node0 = NodePath("../1")
 node1 = NodePath("../W")
 node2 = NodePath("../3")
-node4 = null
-node5 = null
 
 [node name="3" parent="." index="2" instance=ExtResource( 2 )]
 
@@ -34,8 +31,6 @@ position = Vector2( -105, -30 )
 node0 = NodePath("../2")
 node1 = NodePath("../E")
 node2 = NodePath("../4")
-node4 = null
-node5 = null
 
 [node name="4" parent="." index="3" instance=ExtResource( 2 )]
 
@@ -43,8 +38,6 @@ position = Vector2( -75, -30 )
 node0 = NodePath("../3")
 node1 = NodePath("../R")
 node2 = NodePath("../5")
-node4 = null
-node5 = null
 
 [node name="5" parent="." index="4" instance=ExtResource( 2 )]
 
@@ -52,8 +45,6 @@ position = Vector2( -45, -30 )
 node0 = NodePath("../4")
 node1 = NodePath("../T")
 node2 = NodePath("../6")
-node4 = null
-node5 = null
 
 [node name="6" parent="." index="5" instance=ExtResource( 2 )]
 
@@ -61,8 +52,6 @@ position = Vector2( -15, -30 )
 node0 = NodePath("../5")
 node1 = NodePath("../Y")
 node2 = NodePath("../7")
-node4 = null
-node5 = null
 
 [node name="7" parent="." index="6" instance=ExtResource( 2 )]
 
@@ -70,8 +59,6 @@ position = Vector2( 15, -30 )
 node0 = NodePath("../6")
 node1 = NodePath("../Y")
 node2 = NodePath("../8")
-node4 = null
-node5 = null
 
 [node name="8" parent="." index="7" instance=ExtResource( 2 )]
 
@@ -79,8 +66,6 @@ position = Vector2( 45, -30 )
 node0 = NodePath("../7")
 node1 = NodePath("../U")
 node2 = NodePath("../9")
-node4 = null
-node5 = null
 
 [node name="9" parent="." index="8" instance=ExtResource( 2 )]
 
@@ -88,8 +73,6 @@ position = Vector2( 75, -30 )
 node0 = NodePath("../8")
 node1 = NodePath("../I")
 node2 = NodePath("../0")
-node4 = null
-node5 = null
 
 [node name="0" parent="." index="9" instance=ExtResource( 2 )]
 
@@ -97,8 +80,6 @@ position = Vector2( 105, -30 )
 node0 = NodePath("../9")
 node1 = NodePath("../O")
 node2 = NodePath("../-")
-node4 = null
-node5 = null
 
 [node name="-" parent="." index="10" instance=ExtResource( 2 )]
 
@@ -106,16 +87,12 @@ position = Vector2( 135, -30 )
 node0 = NodePath("../0")
 node1 = NodePath("../P")
 node2 = NodePath("../=")
-node4 = null
-node5 = null
 
 [node name="=" parent="." index="11" instance=ExtResource( 2 )]
 
 position = Vector2( 165, -30 )
 node0 = NodePath("../-")
 node1 = NodePath("../[")
-node4 = null
-node5 = null
 
 [node name="Q" parent="." index="12" instance=ExtResource( 2 )]
 
@@ -123,8 +100,6 @@ position = Vector2( -150, 0 )
 node0 = NodePath("../1")
 node1 = NodePath("../W")
 node2 = NodePath("../A")
-node4 = null
-node5 = null
 
 [node name="W" parent="." index="13" instance=ExtResource( 2 )]
 
@@ -133,8 +108,6 @@ node0 = NodePath("../Q")
 node1 = NodePath("../2")
 node2 = NodePath("../E")
 node3 = NodePath("../S")
-node4 = null
-node5 = null
 
 [node name="E" parent="." index="14" instance=ExtResource( 2 )]
 
@@ -143,8 +116,6 @@ node0 = NodePath("../W")
 node1 = NodePath("../3")
 node2 = NodePath("../R")
 node3 = NodePath("../D")
-node4 = null
-node5 = null
 
 [node name="R" parent="." index="15" instance=ExtResource( 2 )]
 
@@ -153,8 +124,6 @@ node0 = NodePath("../E")
 node1 = NodePath("../4")
 node2 = NodePath("../T")
 node3 = NodePath("../F")
-node4 = null
-node5 = null
 
 [node name="T" parent="." index="16" instance=ExtResource( 2 )]
 
@@ -163,8 +132,6 @@ node0 = NodePath("../R")
 node1 = NodePath("../5")
 node2 = NodePath("../Y")
 node3 = NodePath("../G")
-node4 = null
-node5 = null
 
 [node name="Y" parent="." index="17" instance=ExtResource( 2 )]
 
@@ -182,8 +149,6 @@ node0 = NodePath("../Y")
 node1 = NodePath("../8")
 node2 = NodePath("../I")
 node3 = NodePath("../H")
-node4 = null
-node5 = null
 
 [node name="I" parent="." index="19" instance=ExtResource( 2 )]
 
@@ -192,8 +157,6 @@ node0 = NodePath("../U")
 node1 = NodePath("../9")
 node2 = NodePath("../O")
 node3 = NodePath("../J")
-node4 = null
-node5 = null
 
 [node name="O" parent="." index="20" instance=ExtResource( 2 )]
 
@@ -202,8 +165,6 @@ node0 = NodePath("../I")
 node1 = NodePath("../0")
 node2 = NodePath("../P")
 node3 = NodePath("../K")
-node4 = null
-node5 = null
 
 [node name="P" parent="." index="21" instance=ExtResource( 2 )]
 
@@ -212,8 +173,6 @@ node0 = NodePath("../O")
 node1 = NodePath("../-")
 node2 = NodePath("../[")
 node3 = NodePath("../L")
-node4 = null
-node5 = null
 
 [node name="[" parent="." index="22" instance=ExtResource( 2 )]
 
@@ -221,8 +180,6 @@ position = Vector2( 150, 0 )
 node0 = NodePath("../P")
 node1 = NodePath("../=")
 node2 = NodePath("../;")
-node4 = null
-node5 = null
 
 [node name="A" parent="." index="23" instance=ExtResource( 2 )]
 
@@ -230,8 +187,6 @@ position = Vector2( -135, 30 )
 node0 = NodePath("../Q")
 node1 = NodePath("../S")
 node2 = NodePath("../Z")
-node4 = null
-node5 = null
 
 [node name="S" parent="." index="24" instance=ExtResource( 2 )]
 
@@ -240,8 +195,6 @@ node0 = NodePath("../A")
 node1 = NodePath("../W")
 node2 = NodePath("../D")
 node3 = NodePath("../X")
-node4 = null
-node5 = null
 
 [node name="D" parent="." index="25" instance=ExtResource( 2 )]
 
@@ -250,8 +203,6 @@ node0 = NodePath("../S")
 node1 = NodePath("../E")
 node2 = NodePath("../F")
 node3 = NodePath("../C")
-node4 = null
-node5 = null
 
 [node name="F" parent="." index="26" instance=ExtResource( 2 )]
 
@@ -260,8 +211,6 @@ node0 = NodePath("../D")
 node1 = NodePath("../R")
 node2 = NodePath("../G")
 node3 = NodePath("../V")
-node4 = null
-node5 = null
 
 [node name="G" parent="." index="27" instance=ExtResource( 2 )]
 
@@ -271,7 +220,6 @@ node1 = NodePath("../T")
 node2 = NodePath("../H")
 node3 = NodePath("../B")
 node4 = NodePath("../Y")
-node5 = null
 
 [node name="H" parent="." index="28" instance=ExtResource( 2 )]
 
@@ -281,7 +229,6 @@ node1 = NodePath("../U")
 node2 = NodePath("../J")
 node3 = NodePath("../B")
 node4 = NodePath("../Y")
-node5 = null
 
 [node name="J" parent="." index="29" instance=ExtResource( 2 )]
 
@@ -290,8 +237,6 @@ node0 = NodePath("../H")
 node1 = NodePath("../I")
 node2 = NodePath("../K")
 node3 = NodePath("../N")
-node4 = null
-node5 = null
 
 [node name="K" parent="." index="30" instance=ExtResource( 2 )]
 
@@ -300,8 +245,6 @@ node0 = NodePath("../J")
 node1 = NodePath("../O")
 node2 = NodePath("../L")
 node3 = NodePath("../M")
-node4 = null
-node5 = null
 
 [node name="L" parent="." index="31" instance=ExtResource( 2 )]
 
@@ -310,8 +253,6 @@ node0 = NodePath("../K")
 node1 = NodePath("../P")
 node2 = NodePath("../;")
 node3 = NodePath("../<")
-node4 = null
-node5 = null
 
 [node name=";" parent="." index="32" instance=ExtResource( 2 )]
 
@@ -319,16 +260,12 @@ position = Vector2( 135, 30 )
 node0 = NodePath("../L")
 node1 = NodePath("../[")
 node2 = NodePath("../>")
-node4 = null
-node5 = null
 
 [node name="Z" parent="." index="33" instance=ExtResource( 2 )]
 
 position = Vector2( -120, 60 )
 node0 = NodePath("../A")
 node1 = NodePath("../X")
-node4 = null
-node5 = null
 
 [node name="X" parent="." index="34" instance=ExtResource( 2 )]
 
@@ -336,8 +273,6 @@ position = Vector2( -90, 60 )
 node0 = NodePath("../Z")
 node1 = NodePath("../S")
 node2 = NodePath("../C")
-node4 = null
-node5 = null
 
 [node name="C" parent="." index="35" instance=ExtResource( 2 )]
 
@@ -345,8 +280,7 @@ position = Vector2( -60, 60 )
 node0 = NodePath("../X")
 node1 = NodePath("../D")
 node2 = NodePath("../V")
-node4 = null
-node5 = null
+node3 = NodePath("../Spacebar")
 
 [node name="V" parent="." index="36" instance=ExtResource( 2 )]
 
@@ -354,8 +288,7 @@ position = Vector2( -30, 60 )
 node0 = NodePath("../C")
 node1 = NodePath("../F")
 node2 = NodePath("../B")
-node4 = null
-node5 = null
+node3 = NodePath("../Spacebar")
 
 [node name="B" parent="." index="37" instance=ExtResource( 2 )]
 
@@ -364,8 +297,7 @@ node0 = NodePath("../V")
 node1 = NodePath("../G")
 node2 = NodePath("../H")
 node3 = NodePath("../N")
-node4 = null
-node5 = null
+node4 = NodePath("../Spacebar")
 
 [node name="N" parent="." index="38" instance=ExtResource( 2 )]
 
@@ -373,8 +305,7 @@ position = Vector2( 30, 60 )
 node0 = NodePath("../B")
 node1 = NodePath("../J")
 node2 = NodePath("../M")
-node4 = null
-node5 = null
+node3 = NodePath("../Spacebar")
 
 [node name="M" parent="." index="39" instance=ExtResource( 2 )]
 
@@ -382,8 +313,7 @@ position = Vector2( 60, 60 )
 node0 = NodePath("../N")
 node1 = NodePath("../K")
 node2 = NodePath("../<")
-node4 = null
-node5 = null
+node3 = NodePath("../Spacebar")
 
 [node name="<" parent="." index="40" instance=ExtResource( 2 )]
 
@@ -391,15 +321,15 @@ position = Vector2( 90, 60 )
 node0 = NodePath("../M")
 node1 = NodePath("../L")
 node2 = NodePath("../>")
-node4 = null
-node5 = null
 
 [node name=">" parent="." index="41" instance=ExtResource( 2 )]
 
 position = Vector2( 120, 60 )
 node0 = NodePath("../<")
 node1 = NodePath("../;")
-node4 = null
-node5 = null
+
+[node name="Spacebar" parent="." index="42" instance=ExtResource( 3 )]
+
+position = Vector2( 0, 90 )
 
 

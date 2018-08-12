@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-ec880de02d5dab0aa15458af9d6c53ed.stex"
+path="res://.import/Spacebar.png-e8bbd9b16a0909027d4844df7b8cc1db.stex"
 
 [deps]
 
-source_file="res://Assets/icon.png"
-dest_files=[ "res://.import/icon.png-ec880de02d5dab0aa15458af9d6c53ed.stex" ]
+source_file="res://Assets/spacebar/Spacebar.png"
+dest_files=[ "res://.import/Spacebar.png-e8bbd9b16a0909027d4844df7b8cc1db.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -17,16 +17,22 @@ export(NodePath) var node4
 export(NodePath) var node5
 export var power = 100 # Strength of the current key
 
-var key_name
 var label
+var animation_player
+var timer
 
+var key_name
 var side
 var player_last_attacked_by
 
 func _ready():
-	key_name = self.name
 	label = $Label
+	animation_player = $AnimationPlayer
+	timer = $Timer
+	
+	key_name = self.name
 	side = NEUTRAL
+	
 	# Create the key name
 	_create_key_name()
 
@@ -99,13 +105,14 @@ func _create_key_name():
 func _process(delta):
 	# Check to see if the key has been defeated
 	if power < 1:
-		emit_signal("defeated", key_name, player_last_attacked_by)
+		emit_signal("defeated", key_name, player_last_attacked_by)	
 	
 	_attack()
 
 func pressed(key):
 	if key == key_name:
-		print("HELP")
+		print(key_name + " pressed!")
+		
 
 func _attack():
 	
