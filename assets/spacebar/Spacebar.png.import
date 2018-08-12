@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Spacebar.png-4298fc3e638297f868b32f3818aa7fa8.stex"
+path="res://.import/Spacebar.png-e8bbd9b16a0909027d4844df7b8cc1db.stex"
 
 [deps]
 
-source_file="res://assets/spacebar/Spacebar.png"
-dest_files=[ "res://.import/Spacebar.png-4298fc3e638297f868b32f3818aa7fa8.stex" ]
+source_file="res://Assets/spacebar/Spacebar.png"
+dest_files=[ "res://.import/Spacebar.png-e8bbd9b16a0909027d4844df7b8cc1db.stex" ]
 
 [params]
 

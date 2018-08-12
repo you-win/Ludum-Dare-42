@@ -126,7 +126,7 @@ node2 = null
 node3 = null
 node4 = null
 node5 = null
-power = 20
+power = 35
 health = 100
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
@@ -183,7 +183,7 @@ autostart = false
 [node name="AttackDelay" type="Timer" parent="." index="4"]
 
 process_mode = 1
-wait_time = 1.0
+wait_time = 0.75
 one_shot = false
 autostart = false
 

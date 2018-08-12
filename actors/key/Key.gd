@@ -24,7 +24,7 @@ var actual_node5
 
 var actual_node_list
 
-export(int) var power = 20 # Strength of the current key
+export(int) var power = 35 # Strength of the current key
 export(int) var health = 100
 
 var label
@@ -124,10 +124,10 @@ func _process(delta):
 	if health < 1:
 		emit_signal("defeated", key_name, player_last_attacked_by)
 		_reset_stats()
-	if(self.side != Global.NEUTRAL and can_attack):
+	"""if(self.side != Global.NEUTRAL and can_attack):
 		_attack()
 		can_attack = false
-		attack_delay.start()
+		attack_delay.start()"""
 
 func pressed(key):
 	# Using self.name instead of key_name because of 
@@ -135,6 +135,10 @@ func pressed(key):
 	# Ex: ; is returned as Semicolon
 	if(key == self.name and can_press_again):
 		_play_pressed_animation()
+		if(self.side != Global.NEUTRAL and can_attack):
+			_attack()
+			can_attack = false
+			attack_delay.start()
 		can_press_again = false
 		timer.start()
 
