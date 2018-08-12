@@ -11,6 +11,7 @@ config_version=3
 [application]
 
 config/name="Not Enough Room in this Space[bar]"
+run/main_scene="res://scenes/Menu/Menu.tscn"
 config/icon="res://Assets/icon.png"
 
 [autoload]

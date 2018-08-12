@@ -1,32 +1,34 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://actors/key/Key.tscn" type="PackedScene" id=1]
+[ext_resource path="res://actors/keyboard/Keyboard.gd" type="Script" id=1]
+[ext_resource path="res://actors/key/Key.tscn" type="PackedScene" id=2]
 
 [node name="Keyboard" type="Node2D" index="0"]
 
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Q" parent="." index="0" instance=ExtResource( 1 )]
+[node name="Q" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="W" parent="." index="1" instance=ExtResource( 1 )]
+[node name="W" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 47.3099, 0.400925 )
 
-[node name="E" parent="." index="2" instance=ExtResource( 1 )]
+[node name="E" parent="." index="2" instance=ExtResource( 2 )]
 
 position = Vector2( 107.45, 0.801849 )
 
-[node name="R" parent="." index="3" instance=ExtResource( 1 )]
+[node name="R" parent="." index="3" instance=ExtResource( 2 )]
 
 position = Vector2( 156.363, 1.20279 )
 
-[node name="T" parent="." index="4" instance=ExtResource( 1 )]
+[node name="T" parent="." index="4" instance=ExtResource( 2 )]
 
-position = Vector2( 214.899, 60.1397 )
+position = Vector2( 211.633, 2.69217 )
 
-[node name="Y" parent="." index="5" instance=ExtResource( 1 )]
+[node name="Y" parent="." index="5" instance=ExtResource( 2 )]
 
 position = Vector2( 274.104, 1.41145 )
 

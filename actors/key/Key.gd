@@ -12,8 +12,10 @@ enum { LEFT, NEUTRAL, RIGHT }
 export var power = 100 # Strength of the current key
 
 var key_name
-var side # Set by Player actor
 var label
+
+var side
+var player_last_attacked_by
 
 func _ready():
 	key_name = self.name
@@ -91,5 +93,14 @@ func _create_key_name():
 func _process(delta):
 	# Check to see if the key has been defeated
 	if power < 1:
-		emit_signal("defeated")
+		emit_signal("defeated", key_name, player_last_attacked_by)
 	
+	_attack()
+
+func pressed(key):
+	if key == key_name:
+		print("HELP")
+
+func _attack():
+	
+	pass
