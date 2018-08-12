@@ -10,5 +10,7 @@ script = ExtResource( 1 )
 [node name="Keyboard" parent="." index="0" instance=ExtResource( 2 )]
 
 position = Vector2( 500.613, 268.119 )
+scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Transform" ]
 
 

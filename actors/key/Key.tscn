@@ -133,7 +133,7 @@ health = 100
 
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 64, 0, 32, 32 )
+region_rect = Rect2( 32, 0, 32, 32 )
 _sections_unfolded = [ "Region" ]
 
 [node name="Label" type="Label" parent="." index="1"]

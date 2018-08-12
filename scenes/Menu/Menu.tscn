@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/Menu/Singleplayer.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Menu/Exit Game.gd" type="Script" id=2]
 
 [node name="Menu" type="Node2D"]
 
@@ -113,5 +114,6 @@ group = null
 text = "Exit Game"
 flat = false
 align = 1
+script = ExtResource( 2 )
 
 

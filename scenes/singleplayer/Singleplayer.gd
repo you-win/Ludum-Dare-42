@@ -20,11 +20,11 @@ func _initialize_scores():
 	Global.player_2_data = ["["]
 
 func update_score(key, new_owner):
-	if new_owner == Global.RIGHT:
+	if new_owner == Global.LEFT:
 		Global.player_1_data.append(key)
 		if Global.player_2_data.has(key):
 			Global.player_2_data.remove(key)
-	elif new_owner == Global.LEFT:
+	elif new_owner == Global.RIGHT:
 		Global.player_2_data.append(key)
 		if Global.player_1_data.has(key):
 			Global.player_1_data.remove(key)
@@ -35,4 +35,3 @@ func update_score(key, new_owner):
 			Global.player_2_data.remove(key)
 	else:
 		print("There's been a problem in the update_score function")
-	

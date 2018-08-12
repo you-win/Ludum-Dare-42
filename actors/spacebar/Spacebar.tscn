@@ -5,7 +5,7 @@
 
 [sub_resource type="Animation" id=1]
 
-resource_name = "b_pressed"
+resource_name = "l_pressed"
 length = 1.0
 loop = false
 step = 0.1
@@ -24,7 +24,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=2]
 
-resource_name = "b_unpressed"
+resource_name = "l_unpressed"
 length = 1.0
 loop = false
 step = 0.1
@@ -133,7 +133,7 @@ health = 100
 
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 0, 64, 160, 32 )
+region_rect = Rect2( 0, 128, 160, 32 )
 _sections_unfolded = [ "Region" ]
 
 [node name="Label" type="Label" parent="." index="1"]
@@ -165,8 +165,8 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/b_pressed = SubResource( 1 )
-anims/b_unpressed = SubResource( 2 )
+anims/l_pressed = SubResource( 1 )
+anims/l_unpressed = SubResource( 2 )
 anims/n_pressed = SubResource( 3 )
 anims/n_unpressed = SubResource( 4 )
 anims/r_pressed = SubResource( 5 )

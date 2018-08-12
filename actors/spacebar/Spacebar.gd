@@ -4,4 +4,4 @@ extends "res://actors/key/Key.gd"
 # but has some special properties
 
 func _ready():
-	pass
+	health = 1000

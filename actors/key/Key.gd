@@ -69,13 +69,16 @@ func _ready():
 			_:
 				pass
 	
-	side = Global.NEUTRAL
+	if Global.player_1_data.has(key_name):
+		side = Global.LEFT
+	elif Global.player_2_data.has(key_name):
+		side = Global.RIGHT
+	else:
+		side = Global.NEUTRAL
+	
 	can_press_again = true
 	can_attack = true
 	actual_node_list = []
-	
-	# Set default animation
-	animation_player.play("n_unpressed")
 	
 	# Create the key name
 	_create_key_name()
@@ -84,66 +87,6 @@ func _ready():
 
 func _create_key_name():
 	label.text = key_name
-	
-	# The below code to be used when appropriate assets have been created
-	"""
-	match key_name:
-		"a":
-			pass
-		"b":
-			pass
-		"c":
-			pass
-		"d":
-			pass
-		"e":
-			pass
-		"f":
-			pass
-		"g":
-			pass
-		"h":
-			pass
-		"i":
-			pass
-		"j":
-			pass
-		"k":
-			pass
-		"l":
-			pass
-		"m":
-			pass
-		"n":
-			pass
-		"o":
-			pass
-		"p":
-			pass
-		"q":
-			pass
-		"r":
-			pass
-		"s":
-			pass
-		"t":
-			pass
-		"u":
-			pass
-		"v":
-			pass
-		"w":
-			pass
-		"x":
-			pass
-		"y":
-			pass
-		"z":
-			pass
-		_:
-			# Do nothing
-			pass
-	"""
 
 func _set_actual_nodes():
 	if node0 != null:
@@ -174,10 +117,13 @@ func _process(delta):
 	else:
 		side = Global.NEUTRAL
 	
+	if can_press_again:
+		_on_Timer_timeout()
+	
 	# Check to see if the key has been defeated
 	if health < 1:
 		emit_signal("defeated", key_name, player_last_attacked_by)
-		print(key_name + " is dead!")
+		_reset_stats()
 	if(self.side != Global.NEUTRAL and can_attack):
 		_attack()
 		can_attack = false
@@ -204,8 +150,6 @@ func _play_pressed_animation():
 			print("There's a problem with the side variable!")
 
 func _attack():
-	if(key_name == "Q" and actual_node0 != null):
-		print(key_name + " attempting to attack " + actual_node0.name)
 	for actual_node in actual_node_list:
 		if(actual_node != null and actual_node.side != self.side):
 			actual_node.health -= power
@@ -225,3 +169,6 @@ func _on_Timer_timeout():
 
 func _on_AttackDelay_timeout():
 	can_attack = true
+
+func _reset_stats():
+	health = 50
